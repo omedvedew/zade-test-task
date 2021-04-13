@@ -55,13 +55,13 @@ main {
         @include block-title;
     }
 
-    .main__import-block {
+    .main__block {
         display: grid;
         width: 100%;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: auto;
 
-        .main__import-block__item {
+        .main__block__item {
             @include block-item;
         }
 
@@ -71,6 +71,47 @@ main {
 
         :last-child {
             margin-right: 0;
+        }
+    }
+
+    .export-block {
+        .main__block__item {
+            grid-template-rows: 28px auto;
+            align-items: start;
+
+            :last-child {
+                align-self: end;
+            }
+
+            .m_b_i__columns {
+                align-self: start;
+                height: 100%;
+                justify-content: space-between;
+
+                .m_b_i__columns__col {
+                    display: grid;
+                    align-items: start;
+
+                    :last-child {
+                        align-self: end;
+                    }
+                }
+
+                :last-child {
+                    align-self: start;
+                    height: 100%;
+                }
+            }
+
+            h3 {
+                margin-bottom: 0;
+            }
+
+            .m_b_i__content {
+                .m_b_i__content__row {
+                    align-items: end;
+                }
+            }
         }
     }
 }

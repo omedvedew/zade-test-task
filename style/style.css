@@ -72,13 +72,13 @@ main .main__block-title .main__block-title__hor-line {
   opacity: 0.5;
   justify-content: start;
 }
-main .main__import-block {
+main .main__block {
   display: grid;
   width: 100%;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
 }
-main .main__import-block .main__import-block__item {
+main .main__block .main__block__item {
   display: grid;
   max-width: 100%;
   margin: 0 15px;
@@ -88,41 +88,86 @@ main .main__import-block .main__import-block__item {
   grid-template-rows: 38px auto;
   grid-template-columns: auto;
   font-family: "Nunito Sans", sans-serif;
+  align-items: start;
 }
-main .main__import-block .main__import-block__item h3 {
+main .main__block .main__block__item .m_b_i__columns {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+main .main__block .main__block__item h3 {
   font-weight: 400;
   line-height: 28px;
   color: #2C343F;
   margin-bottom: 10px;
 }
-main .main__import-block .main__import-block__item .block-content {
+main .main__block .main__block__item .m_b_i__description {
+  display: grid;
+  font-size: 14px;
+  line-height: 25px;
+  opacity: 0.6;
+  color: #2C343F;
+  margin-bottom: 10px;
+}
+main .main__block .main__block__item .m_b_i__content {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
 }
-main .main__import-block .main__import-block__item .block-content .m_i_i__content__row {
+main .main__block .main__block__item .m_b_i__content .m_b_i__content__row {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
   justify-content: start;
   align-items: start;
 }
-main .main__import-block .main__import-block__item .block-content .m_i_i__content__row .content-item {
+main .main__block .main__block__item .m_b_i__content .m_b_i__content__row .m_b_i__content_item {
   display: grid;
   background-color: #FFDD00;
   width: fit-content;
   height: fit-content;
   padding: 4px 14px;
   margin: 2px;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 700;
 }
-main .main__import-block .main__import-block__item .block-content .m_i_i__content__row :first-child {
+main .main__block .main__block__item .m_b_i__content .m_b_i__content__row :first-child {
   margin-left: 0;
 }
-main .main__import-block :first-child {
+main .main__block :first-child {
   margin-left: 0;
 }
-main .main__import-block :last-child {
+main .main__block :last-child {
   margin-right: 0;
+}
+main .export-block .main__block__item {
+  grid-template-rows: 28px auto;
+  align-items: start;
+}
+main .export-block .main__block__item :last-child {
+  align-self: end;
+}
+main .export-block .main__block__item .m_b_i__columns {
+  align-self: start;
+  height: 100%;
+  justify-content: space-between;
+}
+main .export-block .main__block__item .m_b_i__columns .m_b_i__columns__col {
+  display: grid;
+  align-items: start;
+}
+main .export-block .main__block__item .m_b_i__columns .m_b_i__columns__col :last-child {
+  align-self: end;
+}
+main .export-block .main__block__item .m_b_i__columns :last-child {
+  align-self: start;
+  height: 100%;
+}
+main .export-block .main__block__item h3 {
+  margin-bottom: 0;
+}
+main .export-block .main__block__item .m_b_i__content .m_b_i__content__row {
+  align-items: end;
 }
 
 /*# sourceMappingURL=style.css.map */
