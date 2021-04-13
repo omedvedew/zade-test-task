@@ -1,2 +1,76 @@
 @import './mixins.scss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito+Sans:wght@300;400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    width: 100%;
+    background-image: url(../images/Mask-Group.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: 1170px;
+    grid-template-rows: auto auto auto auto auto;
+    justify-content: center;
+
+    .main__introduction-block {
+        display: grid;
+        width: 580px;
+        padding: 44px 100px 48px 39px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        background-color: #2C343F;
+        margin-bottom: 32px;
+
+        .main__introduction-block__title {
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            font-size: 40px;
+            color: #fff;
+            font-weight: 700;
+            line-height: 52px;
+            margin-bottom: 22px;
+
+            span {
+                color: #FFDD00;
+            }
+        }
+
+        .main__introduction-block__text {
+            font-family: 'Nunito Sans', sans-serif;
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
+            opacity: 0.8;
+            line-height: 26px;
+            margin-right: 56px;
+        }
+    }
+
+    .main__block-title {
+        @include block-title;
+    }
+
+    .main__import-block {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto;
+
+        .main__import-block__item {
+            @include block-item;
+        }
+
+        :first-child {
+            margin-left: 0;
+        }
+
+        :last-child {
+            margin-right: 0;
+        }
+    }
+}
