@@ -10,6 +10,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
+    @media (max-width: 1200px) {
+        justify-content: center;
+        margin-top: 25px;
+    }
 
     .main__block-title__title {
         display: grid;
@@ -24,6 +28,9 @@
         background-color: #fff;
         opacity: 0.5;
         justify-content: start;
+        @media (max-width: 1200px) {
+            display: none;
+        }
     }
 }
 
@@ -38,6 +45,9 @@
     grid-template-columns: auto;
     font-family: 'Nunito Sans', sans-serif;
     align-items: start;
+    @media (max-width: 1439px) {
+        margin: 10px
+    }
 
     .m_b_i__columns {
         display: grid;

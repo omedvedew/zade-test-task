@@ -16,6 +16,12 @@ main {
   grid-template-rows: auto auto auto auto auto;
   justify-content: center;
 }
+@media (max-width: 1200px) {
+  main {
+    grid-template-columns: 100%;
+    padding: 0 25px;
+  }
+}
 main .main__introduction-block {
   display: grid;
   width: 580px;
@@ -24,6 +30,11 @@ main .main__introduction-block {
   grid-template-rows: auto;
   background-color: #2C343F;
   margin-bottom: 32px;
+}
+@media (max-width: 767px) {
+  main .main__introduction-block {
+    width: 100%;
+  }
 }
 main .main__introduction-block .main__introduction-block__title {
   font-family: "Montserrat", sans-serif;
@@ -59,6 +70,12 @@ main .main__block-title {
   align-items: center;
   margin-bottom: 24px;
 }
+@media (max-width: 1200px) {
+  main .main__block-title {
+    justify-content: center;
+    margin-top: 25px;
+  }
+}
 main .main__block-title .main__block-title__title {
   display: grid;
   font-style: normal;
@@ -72,11 +89,26 @@ main .main__block-title .main__block-title__hor-line {
   opacity: 0.5;
   justify-content: start;
 }
+@media (max-width: 1200px) {
+  main .main__block-title .main__block-title__hor-line {
+    display: none;
+  }
+}
 main .main__block {
   display: grid;
   width: 100%;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
+}
+@media (max-width: 1200px) {
+  main .main__block {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media (max-width: 767px) {
+  main .main__block {
+    grid-template-columns: 100%;
+  }
 }
 main .main__block .main__block__item {
   display: grid;
@@ -89,6 +121,11 @@ main .main__block .main__block__item {
   grid-template-columns: auto;
   font-family: "Nunito Sans", sans-serif;
   align-items: start;
+}
+@media (max-width: 1439px) {
+  main .main__block .main__block__item {
+    margin: 10px;
+  }
 }
 main .main__block .main__block__item .m_b_i__columns {
   display: grid;
@@ -134,11 +171,13 @@ main .main__block .main__block__item .m_b_i__content .m_b_i__content__row .m_b_i
 main .main__block .main__block__item .m_b_i__content .m_b_i__content__row :first-child {
   margin-left: 0;
 }
-main .main__block :first-child {
-  margin-left: 0;
-}
-main .main__block :last-child {
-  margin-right: 0;
+@media (min-width: 1200px) {
+  main .main__block :first-child {
+    margin-left: 0;
+  }
+  main .main__block :last-child {
+    margin-right: 0;
+  }
 }
 main .export-block .main__block__item {
   grid-template-rows: 28px auto;

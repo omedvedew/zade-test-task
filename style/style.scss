@@ -16,6 +16,10 @@ main {
     grid-template-columns: 1170px;
     grid-template-rows: auto auto auto auto auto;
     justify-content: center;
+    @media (max-width: 1200px) {
+        grid-template-columns: 100%;
+        padding: 0 25px;
+    }
 
     .main__introduction-block {
         display: grid;
@@ -25,6 +29,9 @@ main {
         grid-template-rows: auto;
         background-color: #2C343F;
         margin-bottom: 32px;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
 
         .main__introduction-block__title {
             font-family: 'Montserrat', sans-serif;
@@ -60,17 +67,25 @@ main {
         width: 100%;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: auto;
+        @media (max-width: 1200px) {
+            grid-template-columns: 50% 50%;
+        }
+        @media (max-width: 767px) {
+            grid-template-columns: 100%;
+        }
 
         .main__block__item {
             @include block-item;
         }
 
-        :first-child {
-            margin-left: 0;
-        }
-
-        :last-child {
-            margin-right: 0;
+        @media (min-width: 1200px) {
+            :first-child {
+                margin-left: 0;
+            }
+    
+            :last-child {
+                margin-right: 0;
+            }
         }
     }
 
